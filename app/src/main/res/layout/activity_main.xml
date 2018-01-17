@@ -7,10 +7,14 @@
     tools:context="com.example.avr.androiddirtycow.MainActivity">
 
     <RelativeLayout
-        android:layout_width="375dp"
-        android:layout_height="506dp"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp">
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.59">
 
         <TextView
             android:id="@+id/textView4"
@@ -26,7 +30,7 @@
 
         <EditText
             android:id="@+id/editTextFilePath"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="31dp"
@@ -49,10 +53,12 @@
 
         <EditText
             android:id="@+id/editTextOffset"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignEnd="@+id/editTextFilePath"
+            android:layout_alignLeft="@+id/editTextFilePath"
             android:layout_alignRight="@+id/editTextFilePath"
+            android:layout_alignStart="@+id/editTextFilePath"
             android:layout_below="@+id/editTextFilePath"
             android:layout_marginTop="21dp"
             android:ems="10"
@@ -71,10 +77,12 @@
 
         <EditText
             android:id="@+id/editTextReplacementText"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignEnd="@+id/editTextOffset"
+            android:layout_alignLeft="@+id/editTextOffset"
             android:layout_alignRight="@+id/editTextOffset"
+            android:layout_alignStart="@+id/editTextOffset"
             android:layout_below="@+id/editTextOffset"
             android:layout_marginTop="27dp"
             android:ems="10"
@@ -85,9 +93,11 @@
             android:id="@+id/buttonGo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/textView6"
-            android:layout_alignStart="@+id/textView6"
+            android:layout_alignLeft="@+id/editTextReplacementText"
+            android:layout_alignStart="@+id/editTextReplacementText"
             android:layout_centerVertical="true"
-            android:text="GO!" />
+            android:text="GO!"
+            android:textSize="24sp" />
+
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>
